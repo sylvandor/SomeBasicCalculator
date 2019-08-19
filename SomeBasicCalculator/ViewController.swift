@@ -55,6 +55,11 @@ class ViewController: UIViewController {
         updateUi()
     }
     
+    @IBAction func clearCurrentNum(_ sender: UIButton) {
+        currentNum = 0
+        updateUi()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,7 +70,6 @@ class ViewController: UIViewController {
         currentNumLabel.text = "\(currentNum)"
         functionLabel.text = currentFunction.description
     }
-    
     
     enum Function: Int, CustomStringConvertible{
         case ADDITION = 0,
