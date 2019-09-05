@@ -56,7 +56,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearCurrentNum(_ sender: UIButton) {
-        currentNum = 0
+        if currentNum != 0 {
+            currentNum = 0
+        } else {
+            finalNum = 0
+        }
+        
         updateUi()
     }
     
